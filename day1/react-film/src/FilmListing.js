@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FilmRow from './FilmRow'
+import './App.css';
 class FilmListing extends Component {
     render() {
         let { films } = this.props.FilmData
@@ -11,7 +12,11 @@ class FilmListing extends Component {
                 key={item.id}
             />)
         return (
-            <h1>{allFilms}</h1>
+            <div className="film-list">
+                <h1 className="section-title">FILMS</h1>
+                <h1>{allFilms}</h1>
+            </div>
+
         );
     }
 }
