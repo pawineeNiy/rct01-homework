@@ -5,8 +5,8 @@ import FilmPoster from './FilmPoster'
 class FilmRow extends Component {
     render() {
         let { title, release_date, poster_path, key } = this.props
-        let date = new Date(release_date);
-        let year = date.getFullYear();
+        let year = new Date(release_date);
+        let fullyear = year.getFullYear();
         let posterUrl = <FilmPoster
             poster_path={poster_path}           
             />      
@@ -15,7 +15,7 @@ class FilmRow extends Component {
                 {posterUrl}
                 <div className="film-summary">
                     <h1>{title}</h1>
-                    <p>{year}</p>
+                    <p>{fullyear}</p>
                 </div>
             </div>
         );
