@@ -8,8 +8,7 @@ class FilmRow extends Component {
         let date = new Date(release_date);
         let year = date.getFullYear();
         let posterUrl = <FilmPoster
-            poster_path={poster_path}
-            key={key} 
+            poster_path={poster_path}           
             />      
         return (
             <div className="film-row">                
